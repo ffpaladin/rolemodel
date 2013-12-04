@@ -1,0 +1,5 @@
+#!/bin/sh
+
+clingo *.lp storyspec.txt | tee solution.txt | perl pretty_print.pl > answerset.txt
+
+
