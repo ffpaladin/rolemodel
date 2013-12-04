@@ -1,0 +1,117 @@
+/*
+ * Color Scheme
+ * light green: #ceff96
+ * bright green: #7ce23c
+ * light pink: #ea8bae
+ * bright pink: #f42e76
+ * light blue: #a5aebd
+ * white: #ceff96
+ * black: #0d1615
+ */
+body{
+    width: 100%;
+    height: 100%;
+   /* background-color:#B5A7D1;*/
+    color:#fffaf4;
+    font-family: sans-serif;
+    font-size: 20px;
+    margin: 0px;
+
+  background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #b5a7d1 70%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(70%,#b5a7d1)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#b5a7d1 70%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#b5a7d1 70%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#b5a7d1 70%); /* IE10+ */
+    background: linear-gradient(to bottom, #ffffff 0%,#b5a7d1 70%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#b5a7d1',GradientType=0 ); /* IE6-9 */
+}
+h1{
+    font-size: 40px;
+    color: #ceff96;
+}
+#container{
+    position: absolute;
+    /*width is set by js*/
+}
+
+.code{
+    font-family: monospace;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 0px 15px 0px 15px;
+}
+
+.code-hidden{
+    height: 15px;
+    cursor: pointer;
+    padding: 0px 15px 0px 15px;
+}
+
+.caption{
+    padding: 0px 15px 0px 15px;
+}
+
+.frame{
+    /*width is set by js*/
+    float:left;
+}
+.frame-content{
+    width:600px;
+    padding: 15px 15px 15px 15px;
+    border-radius: 15px;
+    background-color: #ceff96;
+    color: #0d1615;
+    margin:auto;
+    
+}
+
+.frame-image{
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 95%;
+    height: auto;
+    cursor: pointer;
+}
+#left{
+    position: fixed; left:0px; top:50%;
+    background-image:url('../images/misc/arrow.png');
+    width:49px; height:99px;
+    cursor: pointer;
+}
+#right{
+    position: fixed; right:0px; top:50%;
+    background-image:url('../images/misc/arrow-flipped.png') ;
+    width:49px; height:99px;
+    cursor: pointer;
+}
+
+.fake-link{
+    cursor: pointer;
+}
+
+/*impress.js stuff*/
+
+.slide{
+    color:black;
+}
+
+#holder{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.impress-enabled .step {
+    margin: 0;
+    opacity: 0.3;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+
+.impress-enabled .step.active { opacity: 1 }

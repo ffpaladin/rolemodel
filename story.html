@@ -1,0 +1,39 @@
+<html>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+     <head>
+            <title>Tell Me A Story.</title>
+            <meta http-equiv="Content-Type" content = "text/html; charset=UTF-8">
+            <meta name="viewport" content="width=1024" />
+    </head>
+    <body>
+        <div id="holder">
+            <title>Tell Me A Story.</title>
+            <div id="logo"><img id="logo-image" src="images/logo.png"/></div>
+            <div id="content"></div>
+            <div id="impress"></div>
+            <div id="left" onclick="impress().prev()"></div>
+            <div id="right" onclick="impress().next()"></div>
+        </div>
+    </body>
+</html>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="js/impress.js"></script>
+<script src="js/data-wrangler.js"></script>
+<script src="js/printer.js"></script>
+<script src="js/conjugator.js"></script>
+<script src="js/refinement.js"></script>
+<script src="js/kaleidoscope-vis.js"></script>
+    <script>      
+        var pathname = window.location.href;
+        var param = pathname.split(/[?#]/);
+
+        console.log(param);
+
+        if (param.length > 2)
+        {
+            console.log("loading story id #" + param[1]);
+            ksVis.loadStory(Math.floor(param[1]));
+        }
+        else
+            ksVis.loadStory(Math.floor(Math.random()*32767));
+    </script>  
