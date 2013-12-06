@@ -27,13 +27,18 @@
         var pathname = window.location.href;
         var param = pathname.split(/[?#]/);
 
-	var survey = "https://docs.google.com/forms/d/1cVdyoLryDP6F0Oky-5mgrpWL6TnLrqxeRvuW7ekql1Q/viewform?entry.1844786069=" + param;
+	var surveyurl = ["https://docs.google.com/forms/d/1bawAfxVi-oN4ytm2WbYripX0uClvj7iXyXkNCSIs-F8/viewform","https://docs.google.com/forms/d/1nlyWZudrgA2ofzFTiHuH3y8c3KoVIKeO8ewNwiqFkpc/viewform","https://docs.google.com/forms/d/1-35Uhlolp6cIAU4vT_f82sG8FqGJLubQXXUf5hjW3Yw/viewform","https://docs.google.com/forms/d/1cVdyoLryDP6F0Oky-5mgrpWL6TnLrqxeRvuW7ekql1Q/viewform"];
 
-        console.log(survey);
+	var survey = 0;
+
+        console.log(surveyurl[survey]);
+
 
         if (param.length > 2)
         {
             console.log("loading story id #" + param[1]);
+	    if (isNaN(survey = parseInt(param[2])))
+		survey = 0;
             ksVis.loadStory(Math.floor(param[1]));
         }
         else

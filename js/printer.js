@@ -71,7 +71,7 @@ function printCaptionsImpress (captions, domElement){
 		}
 	}
 	offset += 1024;
-	$(domElement).append('<div class="step" data-x="'+offset+'"><div class="frame-content"><iframe width="100%" height="600" src="https://docs.google.com/forms/d/1bawAfxVi-oN4ytm2WbYripX0uClvj7iXyXkNCSIs-F8/viewform">Your browser does not support iframes, so you cannot view the feedback form.</iframe><br>Feedback form.</div>');
+	$(domElement).append('<div class="step" data-x="'+offset+'"><div class="frame-content"><iframe width="100%" height="600" src="' + surveyurl[survey] + '">Your browser does not support iframes, so you cannot view the feedback form.</iframe><br>Feedback form.</div>');
 }
 
 //toggles the visibility of the
