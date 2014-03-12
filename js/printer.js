@@ -56,7 +56,8 @@ function printCaptionsImpress (captions, domElement){
 
 			//code display
 			htmlToAppend += '<div class="code-hidden" onclick="toggleCode()"></div>';	//a helper for code hiding
-			htmlToAppend += '<div class="code" onclick="toggleCode()">' + caption.code + "<br/></div>";
+			//htmlToAppend += '<div class="code" onclick="toggleCode()">' + caption.code + "<br/></div>";
+			//todo: figure out how to switch the toggle.
 
 			//image
 			htmlToAppend += '<img class="frame-image" onclick="impress().next()" src="'
@@ -71,7 +72,7 @@ function printCaptionsImpress (captions, domElement){
 		}
 	}
 	offset += 1024;
-	$(domElement).append('<div class="step" data-x="'+offset+'"><div class="frame-content"><iframe width="100%" height="600" src="' + surveyurl[survey] + '">Your browser does not support iframes, so you cannot view the feedback form.</iframe><br>Feedback form.</div>');
+	$(domElement).append('<div class="step" data-x="'+offset+'"><div class="frame-content"><iframe width="100%" height="600" src="' + surveyurl[survey] + '">Your browser does not support iframes, so you cannot view the feedback form.</iframe><br>Feedback form. Since this story is robot-generated, it may require going back to really understand what happened. To do this use the back arrow to review captions.</div>');
 }
 
 //toggles the visibility of the
