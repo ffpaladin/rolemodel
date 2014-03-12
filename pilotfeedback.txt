@@ -1,0 +1,3 @@
+Chaim
+ - make characters more identifiable.
+ - add more instructions to the survey.
