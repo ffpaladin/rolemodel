@@ -31,7 +31,7 @@ function printStoryImpress (story, domElement){
 			//console.log(frame);
 			$(domElement).append(htmlToAppend);
 		}
-		offset = j*1024;
+		offset = j*800;
 		console.log(offset);
 		$(domElement).append('<div class="step" data-x="'+offset+'"><div class="frame-content"><iframe width="100%" height="600" src="https://docs.google.com/forms/d/1bawAfxVi-oN4ytm2WbYripX0uClvj7iXyXkNCSIs-F8/viewform">Your browser does not support iframes, so you cannot view the feedback form.</iframe><br>Feedback form.</div>');
 	}
@@ -47,7 +47,7 @@ function printCaptionsImpress (captions, domElement){
 	for(i = 0; i < captions.length; i++){
 		var caption = captions[i]
 		if(caption != "null" && caption != undefined){
-			offset += 1024;
+			offset += 800;
 			//impress step
 			var htmlToAppend = '<div class="step" data-x="'+offset+' " data-y="0">';
 
@@ -63,9 +63,28 @@ function printCaptionsImpress (captions, domElement){
 			htmlToAppend += '<img class="frame-image" onclick="impress().next()" src="'
 			if(i<=5)
 				htmlToAppend += "images/comics/storyasset0" + i + ".jpg";
-			else
-				htmlToAppend += 'images/comics/filler.jpg'
-			htmlToAppend += '"/></br/>'
+			else {
+
+        htmlToAppend += 'images/comics/filler'
+         
+        if (caption.text.match("apples"))
+          htmlToAppend += '_apple.jpg';
+        else 
+        if (caption.text.match("flowers"))
+          htmlToAppend += '_flowers.jpg';
+        else
+        if (caption.text.split(" ")[3]=="Eliza" || caption.text.split(" ")[0]=="Eliza")
+          htmlToAppend += '_eliza.jpg';  
+        else
+        if (caption.text.split(" ")[3]=="Parry" || caption.text.split(" ")[0]=="Parry")
+          htmlToAppend += '_parry.jpg'; 
+        else
+        if (caption.text.split(" ")[3]=="Al" || caption.text.split(" ")[0]=="Al")
+          htmlToAppend += '_eliza.jpg';         
+        else
+          htmlToAppend += '.jpg';
+      }
+			htmlToAppend += '"/></br/>';
 			//caption
 			htmlToAppend += '<div class="caption">' + caption.text + "</div></div></div>;"
 			$(domElement).append(htmlToAppend);

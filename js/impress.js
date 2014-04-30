@@ -560,7 +560,7 @@
             if(prev >= 0)
                 prev = steps[prev];
             else
-                prev = stesps[0];
+                prev = steps[0];
             //prev = prev >= 0 ? steps[ prev ] : steps[ steps.length-1 ];
             
             return goto(prev);
