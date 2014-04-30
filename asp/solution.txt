@@ -3,7 +3,7 @@ happens(svo(eliza,idle,eliza),7) happens(svo(parry,ptrans(cash2),eliza),7) happe
 SATISFIABLE
 
 Models      : 1+    
-Time        : 1.660
-  Prepare   : 1.090
-  Prepro.   : 0.540
-  Solving   : 0.030
+Time        : 1.990
+  Prepare   : 1.320
+  Prepro.   : 0.630
+  Solving   : 0.040
