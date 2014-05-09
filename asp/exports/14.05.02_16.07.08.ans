@@ -38,7 +38,6 @@ presentation(svo(parry,ptrans(flowers),eliza),7)
 presentation(svo(eliza,ptrans(apple),al),2)
 presentation(motiv(wooed,parry,eliza),8)
 presentation(motiv(wooed,eliza,al),3)
-presentation(svo(parry,attacks(sword),al),5)
 
 SATISFIABLE
 
@@ -63,25 +62,25 @@ Time
 
 
 :
-2.140
+1.980
 
 
 Prepare
 
 
 :
-1.510
+1.320
 
 
 Prepro.
 
 
 :
-0.620
+0.640
 
 
 Solving
 
 
 :
-0.010
+0.020

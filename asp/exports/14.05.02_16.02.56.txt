@@ -14,7 +14,4 @@ presentation(motiv(assaulted,al,parry), 5 );
 presentation(motiv(manipulated,eliza,al), 5 );
 presentation(motiv(murdered,parry,al), 5 );
 presentation(motiv(self_defended_murder,parry,al,5), 5 );
-presentation(svo(al,attacks(sword),parry), 5 );
-presentation(svo(parry,attacks(knife),al), 5 );
-presentation(svo(parry,kills,al), 5 );
 presentation(motiv(rejoiced,eliza,al), 6 );

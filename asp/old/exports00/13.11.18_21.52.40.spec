@@ -9,12 +9,12 @@ initially(attrib(eliza,inactive)).
 % ============================================
 
 %required_role(victim,P).
-%required_role(aggressor,eliza).
-required_role(victim,eliza).
+required_role(aggressor,eliza).
+%required_role(victim,eliza).
 %forbidden_role(victim,P).
 forbidden_role(aggressor,parry).
 forbidden_role(aggressor,al).
-forbidden_role(aggressor,eliza).
+forbidden_role(victim,eliza).
 
 % =============================================
 
