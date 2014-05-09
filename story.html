@@ -27,7 +27,12 @@
         var pathname = window.location.href;
         var param = pathname.split(/[?#]/);
 
-	var surveyurl = ["https://docs.google.com/forms/d/1bawAfxVi-oN4ytm2WbYripX0uClvj7iXyXkNCSIs-F8/viewform","https://docs.google.com/forms/d/1nlyWZudrgA2ofzFTiHuH3y8c3KoVIKeO8ewNwiqFkpc/viewform","https://docs.google.com/forms/d/1-35Uhlolp6cIAU4vT_f82sG8FqGJLubQXXUf5hjW3Yw/viewform","https://docs.google.com/forms/d/1cVdyoLryDP6F0Oky-5mgrpWL6TnLrqxeRvuW7ekql1Q/viewform"];
+	var surveyurl = ["https://docs.google.com/forms/d/1bawAfxVi-oN4ytm2WbYripX0uClvj7iXyXkNCSIs-F8/viewform",
+"https://docs.google.com/forms/d/1nlyWZudrgA2ofzFTiHuH3y8c3KoVIKeO8ewNwiqFkpc/viewform",
+"https://docs.google.com/forms/d/1-35Uhlolp6cIAU4vT_f82sG8FqGJLubQXXUf5hjW3Yw/viewform",
+"https://docs.google.com/forms/d/1cVdyoLryDP6F0Oky-5mgrpWL6TnLrqxeRvuW7ekql1Q/viewform",
+"https://docs.google.com/forms/d/1088DJpp31BdtFcwOS3RPbLehaWuIENqx8JP97TQZQSw/viewform",
+"https://docs.google.com/forms/d/13IaUzvYAqkgojhBVaSeerV_WQCLrie4KrrtJd76V2mc/viewform"];
 
 	var survey = 0;
 
@@ -37,8 +42,8 @@
         if (param.length > 2)
         {
             console.log("loading story id #" + param[1]);
-	    if (isNaN(survey = parseInt(param[2])))
-		survey = 0;
+	          if (isNaN(survey = parseInt(param[2])))
+		          survey = 0;
             ksVis.loadStory(Math.floor(param[1]));
         }
         else
