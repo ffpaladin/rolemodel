@@ -58,8 +58,8 @@ var mourned = {
 	past: "grieved the loss of"};
 
 var murdered = {
-	present: "murder",
-	past: "murdered"};
+	present: "kill",
+	past: "killed"};
 
 var kills = "kills";
 var flowers = "flowers";

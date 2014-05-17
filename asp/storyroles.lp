@@ -11,7 +11,6 @@ has_role(R,P) :-
 %:- required_role(R,P), not has_role(R,P).
 %:- forbidden_role(R,P), has_role(R,P).
 
-
 % present everything that reinforces a role
 
 present(motiv(X,S,P),T) :- harms(X),
@@ -35,7 +34,6 @@ role_satisfied(victim,P) :-
 presentation(motiv(X,S,P),T) :- role_satisfied(victim,P),
 	harms(X),
 	expectation_realized(X,S,P,T).
-
 
 % if you manipulate someone into doing something to yourself, you are nulled
 
@@ -111,7 +109,7 @@ role(aggressor).
 role_satisfied(aggressor,S) :-
         harms(X),
         expectation_realized(X,S,P,T),
-	expectation_realized(rejoiced,S,P,T+1),
+%	      expectation_realized(rejoiced,S,P,T+1),
         not aggression_nullified(X,S,P,T).
 
 
@@ -121,13 +119,22 @@ role_satisfied(aggressor,S) :-
 %	T1>T,
 %	harms(X).
 
+
+%% BUG BUG BUG BUG BUG BUG BUG
+%% BUG BUG BUG BUG BUG BUG BUG
+%% BUG BUG BUG BUG BUG BUG BUG
+
 % manipulated
 aggression_nullified(X,S,P,T) :- expectation_realized(X,S,P,T),
-	expectation_realized(manipulated,S1,S,T),
 	harms(X),
-	happens(svo(S1,mtrans(X,S,P),S),T1),
-	T1<T,
-	expectation_realized(mourned,S,P,T+1).
+%  expectation_realized(mourned,S,P,T1),
+%  expectation_realized(manipulated,S1,S,T),
+  happens(svo(S1,mtrans(X,S,P),S),T1), 
+  T1<T.
+
+%% BUG BUG BUG BUG BUG BUG BUG
+%% BUG BUG BUG BUG BUG BUG BUG
+%% BUG BUG BUG BUG BUG BUG BUG 
 
 % victim didn't care
 aggression_nullified(X,S,P,T) :- expectation_realized(X,S,P,T),
@@ -136,7 +143,6 @@ aggression_nullified(X,S,P,T) :- expectation_realized(X,S,P,T),
 	expectation_realized(masochism,P,P,T),
 	expectation_realized(mourned,S,P,T+1),
 	T1<T.
-
 
 % aggressor acted out of past hurt
 aggression_nullified(X,S,P,T) :- expectation_realized(X,S,P,T),
