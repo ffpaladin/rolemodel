@@ -61,6 +61,8 @@ var murdered = {
 	present: "kill",
 	past: "killed"};
 
+  // made a slight switch from murder to kill
+
 var kills = "kills";
 var flowers = "flowers";
 var brother = "are brothers";
