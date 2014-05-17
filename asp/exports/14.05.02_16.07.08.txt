@@ -1,4 +1,3 @@
-presentation(motiv(assaulted,al,parry), 0 );
 presentation(attrib(al,rel(brother,parry)), 1 );
 presentation(attrib(eliza,rel(acquaintance,al)), 2 );
 presentation(attrib(eliza,rel(acquaintance,parry)), 2 );
@@ -9,5 +8,7 @@ presentation(motiv(wooed,eliza,al), 3 );
 presentation(attrib(parry,unhappy), 4 );
 presentation(motiv(assaulted,parry,al), 4 );
 presentation(motiv(murdered,parry,al), 5 );
+presentation(motiv(mourned,eliza,al), 6 );
+presentation(motiv(mourned,parry,al), 6 );
 presentation(svo(parry,ptrans(flowers),eliza), 7 );
 presentation(motiv(wooed,parry,eliza), 8 );
