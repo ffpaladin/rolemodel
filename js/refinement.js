@@ -82,6 +82,10 @@ var self_defended_murder = {
 	present: "kill in self defense against",
 	past: "killed in self defense against"};
 
+  var accidental_tragedy = {
+  	present: "does not intend to harm",
+  	past: "didn't intend to harm"};
+
 var sword = "sword";
 var knife = "knife";
 
