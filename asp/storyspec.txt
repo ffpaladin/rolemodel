@@ -8,14 +8,16 @@ initially(attrib(eliza,inactive)).
 
 % ============================================
 
+required_role(aggressor,eliza).
+forbidden_role(victim,eliza).
+
 forbidden_role(aggressor,parry).
-%required_role(victim,al).
-%forbidden_role(aggressor,parry).
-%forbidden_role(aggressor,al).
-%forbidden_role(aggressor,eliza).
+required_role(victim,parry).
+
+required_role(aggressor,al).
+forbidden_role(victim,al).
 
 % =============================================
-
 
 %% SCENE 1 - Establish Al and Parry are brothers
 

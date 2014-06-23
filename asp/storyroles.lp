@@ -127,7 +127,7 @@ role_satisfied(aggressor,S) :-
 % manipulated
 aggression_nullified(X,S,P,T) :- expectation_realized(X,S,P,T),
 	harms(X),
-%  expectation_realized(mourned,S,P,T1),
+  expectation_realized(mourned,S,P,T1),
   expectation_realized(manipulated,S1,S,T),
 %  happens(svo(S1,mtrans(X,S,P),S),T1), 
   T1<T.

@@ -1,4 +1,4 @@
-person(al).		% initialize al
+person(al).		    % initialize al
 person(parry).		% initialize parry
 person(eliza).		% initialize eliza
 
@@ -8,16 +8,16 @@ initially(attrib(eliza,inactive)).
 
 % ============================================
 
-%required_role(victim,P).
-%required_role(aggressor,eliza).
-required_role(victim,eliza).
-%forbidden_role(victim,P).
+required_role(aggressor,eliza).
+forbidden_role(victim,eliza).
+
 forbidden_role(aggressor,parry).
-forbidden_role(aggressor,al).
-forbidden_role(aggressor,eliza).
+required_role(victim,parry).
+
+required_role(aggressor,al).
+forbidden_role(victim,al).
 
 % =============================================
-
 
 %% SCENE 1 - Establish Al and Parry are brothers
 
@@ -32,8 +32,6 @@ author_spec(attrib(al,rel(brother,parry)),1).
 author_spec(svo(eliza,introduces,eliza),2).
 author_spec(attrib(eliza,rel(acquaintance,parry)),2).
 author_spec(attrib(eliza,rel(acquaintance,al)),2).
-
-
 
 %% SCENE 3 - Eliza pairs up with Al
 
@@ -54,6 +52,11 @@ author_spec(svo(parry,kills,al),5).
 forbidden_action(svo(P,kills,eliza)).
 forbidden_action(svo(P,kills,parry)).
 
-
 % =========================================
+
+%forbidden_role(victim,P).
+%required_role(victim,P).
+%required_role(aggressor,eliza).
+%required_role(aggressor,al).
+
 
